@@ -110,6 +110,25 @@
       padding: 84px 0 70px;
       overflow: hidden;
     }
+
+    .profile-name {
+      margin: 0 0 34px;
+      overflow: hidden;
+    }
+
+    .profile-name a {
+      display: inline-block;
+      color: var(--ink);
+      text-decoration: none;
+      font: 500 clamp(54px, 9vw, 118px)/.88 "Playfair Display", serif;
+      letter-spacing: -.055em;
+      transition: color .2s ease, transform .2s ease;
+    }
+
+    .profile-name a:hover {
+      color: var(--accent);
+      transform: translateX(4px);
+    }
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -135,7 +154,7 @@
       align-items: end;
     }
     h1 {
-      font: 500 clamp(52px, 7.2vw, 94px)/.97 "Playfair Display", serif;
+      font: 500 clamp(48px, 6.6vw, 86px)/.97 "Playfair Display", serif;
       letter-spacing: -.045em;
       margin: 0 0 28px;
       max-width: 9ch;
@@ -531,6 +550,8 @@
       .nav-inner { min-height: 66px; }
       .nav-cta { padding: 8px 11px; }
       .hero { padding: 48px 0 55px; }
+      .profile-name { margin-bottom: 27px; }
+      .profile-name a { font-size: clamp(48px, 15vw, 72px); }
       h1 { font-size: 54px; }
       .hero-copy { font-size: 16px; line-height: 1.65; }
       section { padding: 65px 0; }
@@ -557,7 +578,7 @@
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#" class="brand">NIKITA<span>.</span>PAL</a>
+      <a href="#top" class="brand">NIKITA<span>.</span>PAL</a>
 
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
@@ -571,9 +592,12 @@
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero" style="border-top:0;">
       <div class="container">
+        <div class="profile-name reveal">
+          <a href="https://nikita-wiki.github.io/portfolio/#" aria-label="Nikita Pal portfolio home">NIKITA PAL</a>
+        </div>
         <div class="eyebrow">E-commerce operations · Remote worldwide</div>
 
         <div class="hero-grid">
